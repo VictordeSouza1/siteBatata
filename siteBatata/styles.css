@@ -1,0 +1,237 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #03000e;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: 50px;
+    flex-direction: column; /* Adapta-se automaticamente para telas menores */
+}
+
+header {
+    background: #040f4e;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite que itens quebrem linha */
+    justify-content: center; /* Centraliza os itens em telas menores */
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 1.5s ease-in-out;
+}
+
+.hero2 {
+    background: url('imgs/fotoatend.jpeg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.hero2 div {
+    background-color: rgba(0, 0, 0, 0.932);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    display: inline-block;
+    margin: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero {
+    background: url('imgs/capa.png.crdownload') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+}
+
+.contato {
+    padding: 20px;
+    background: #03000e;
+    color: white;
+    padding: 50px;
+}
+
+.contato h2 {
+    text-align: center;
+}
+
+.contato form {
+    max-width: 100%; /* Ocupa toda a largura em telas menores */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contato form label {
+    margin-top: 10px;
+}
+
+.contato form input,
+.contato form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contato form button {
+    margin-top: 5px;
+    padding: 10px;
+    background: white;
+    color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+}
+
+/* Metade */
+
+.carrossel {
+    position: relative;
+    width: 90%; /* Reduz a largura para dispositivos menores */
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: rgba(224, 215, 215, 0.56) 0px 22px 70px 4px;
+    background-color: #03000e;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column; /* Alinha verticalmente em telas menores */
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.carrossel-container {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap; /* Itens quebram linha */
+    justify-content: center; /* Centraliza os itens */
+    transition: transform 1.5s ease-in-out;
+}
+
+.carrossel-item {
+    width: 90%; /* Reduz a largura para telas menores */
+    text-align: center;
+    padding: 5px;
+    background-color: #ffffffcc;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.carrossel-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.prev {
+    left: 10px;  
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .carrossel {
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .carrossel {
+        padding: 10px;
+    }
+
+    button.prev, button.next {
+        width: 30px;
+        height: 30px;
+    }
+}
